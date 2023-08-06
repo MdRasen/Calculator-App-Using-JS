@@ -1,0 +1,160 @@
+/* Project Name: Calculator App Using JS
+Youtube: https://youtube.com/@devRasen
+Copyright: 2023 ©MdRasen */
+
+/* General CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom CSS */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1d243d;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20%;
+}
+
+.container .desc {
+  color: whitesmoke;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container .desc h2 {
+  font-size: 26px;
+  letter-spacing: 1.5px;
+}
+
+.container .desc hr {
+  border: 1px solid #8bd17c;
+  width: 50%;
+  margin: 2px auto 4px;
+}
+
+.container .desc h5 {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.container .calculator {
+  width: 390px;
+  background-color: rgb(33, 41, 66);
+  border-radius: 9px;
+  border-top: 10px solid #79a6fe;
+  border-bottom: 10px solid #8bd17c;
+  padding: 15px 20px 10px;
+}
+
+.calculator .input {
+  color: whitesmoke;
+  border: 1px solid #ddd;
+  border-radius: 1px;
+  height: 60px;
+  padding: 10px 6px;
+  margin-right: 5px;
+  text-align: right;
+  font-size: 30px;
+  overflow-x: auto;
+  transition: all 0.2s;
+}
+
+.calculator .operators div {
+  display: inline-block;
+  border: 1px solid #8bd17c;
+  border-radius: 1px;
+  width: 80px;
+  text-align: center;
+  padding: 10px;
+  margin: 20px 4px 10px 0;
+  cursor: pointer;
+  background-color: #8bd17c;
+  transition: all 0.2s;
+}
+
+.calculator .operators div:hover {
+  background-color: #f9f9f9;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #aaa;
+}
+
+.calculator .numpads {
+  display: inline-block;
+}
+
+.numpads .numbers div {
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 1px;
+  width: 80px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 4px 10px 0;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: all 0.2s;
+}
+
+.numpads .numbers div:hover {
+  background-color: #f9f9f9;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #bbb;
+}
+
+.buttons div.equal {
+  display: inline-block;
+  border: 1px solid #3079ed;
+  border-radius: 1px;
+  width: 22%;
+  text-align: center;
+  padding: 100px 10px;
+  margin: 10px 6px 10px 0;
+  vertical-align: top;
+  cursor: pointer;
+  color: #fff;
+  background-color: #4d90fe;
+  transition: all 0.2s;
+}
+
+.buttons div.equal:hover {
+  background-color: #307cf9;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #1857bb;
+}
+
+.calculator .operators div:active,
+.numpads .numbers div:active,
+.buttons div.equal:active {
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 450px) {
+  .container .desc h2 {
+    font-size: 20px;
+  }
+
+  .container .desc h5 {
+    font-size: 12px;
+  }
+
+  .container .calculator {
+    width: 350px;
+  }
+
+  .calculator .operators div,
+  .numpads .numbers div {
+    width: 70px;
+  }
+}
